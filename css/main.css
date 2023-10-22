@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section.main{
+    width: 70%;
+    height: 80vh;
+    background-color: #70a9cf;
+    position: absolute;
+    transform: translate(-50% , -50%);
+    top: 50%;
+    left: 50%;
+    font-family: sans-serif;
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 48px;
+}
+
+
+input#cityInput{
+    background-color: white;
+    border: unset;
+    padding: 12px 8px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+input#cityInput:focus{
+    background-color: #d8d8d8;
+    outline: unset; 
+}
+
+input#submit{
+    background-color: rgb(38, 76, 146);
+    padding: 12px 24px;
+    border: unset;
+    border-radius: 8px; 
+    color: white;
+    cursor: pointer;
+}
