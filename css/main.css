@@ -1,45 +1,116 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Kalameh;
 }
 
-section.main{
-    width: 70%;
-    height: 80vh;
-    background-color: #70a9cf;
-    position: absolute;
-    transform: translate(-50% , -50%);
-    top: 50%;
-    left: 50%;
-    font-family: sans-serif;
-    padding: 24px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 48px;
+@font-face {
+  font-family: Kalameh;
+  src: url(../font/Kalameh-Regular.ttf);
 }
 
-
-input#cityInput{
-    background-color: white;
-    border: unset;
-    padding: 12px 8px;
-    border-radius: 8px;
-    width: 50%;
+@font-face {
+  font-family: Kalameh-Bold;
+  src: url(../font/Kalameh-Bold.ttf);
 }
 
-input#cityInput:focus{
-    background-color: #d8d8d8;
-    outline: unset; 
+section.root {
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/1.jpg) center center/cover no-repeat;
+  position: relative;
 }
 
-input#submit{
-    background-color: rgb(38, 76, 146);
-    padding: 12px 24px;
-    border: unset;
-    border-radius: 8px; 
-    color: white;
-    cursor: pointer;
+.main {
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+    -60deg,
+    #4cd2d6,
+    #5cdfdf,
+    hsl(207, 100%, 76%)
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 48px;
+  width: 652px;
+}
+
+.main > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.main > div > input {
+  flex-grow: 10;
+  border: none;
+  outline: none;
+  padding: 0px 16px;
+  height: 48px;
+  border-radius: 24px;
+  font-size: 16px;
+}
+
+.main > div > button {
+  flex-grow: 2;
+  border: none;
+  outline: none;
+  border-radius: 24px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 100ms linear;
+  background-color: #fff;
+}
+
+.main > div > button:hover {
+  background-color: rgb(86, 114, 190);
+}
+
+.main > div > button#reset:hover {
+  background-color: rgb(190, 86, 86);
+}
+
+.main > div > button:hover > img {
+  filter: invert(100%);
+  transition: all 100ms linear;
+}
+
+.main > .display {
+  width: 100%;
+  font-family: Kalameh;
+  display: none;
+}
+
+.main > .display > .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  gap: 16px;
+}
+
+.main > .display > .wrapper * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 0px 24px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(5px);
+  border-radius: 24px;
 }

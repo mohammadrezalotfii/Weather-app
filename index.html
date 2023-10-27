@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,23 +8,27 @@
   </head>
   <body>
     <!-- start project -->
-    <section class="main">
-      <section>
-        <input type="text" id="cityInput" placeholder="Enter Your City" />
-        <input type="submit" value="submit" id="submit" />
-      </section>
-
-      <section class="display">
-        <section class="wrapper">
+    <section class="root">
+      <section class="main">
+        <div class="search">
+          <input type="text" id="cityInput" placeholder="شهر خود را وارد کنید" />
+          <button type="submit" id="submit">
+            <img src="./icon/Search.svg" alt="" />
+          </button>
+          <button type="reset" id="reset"><img src="./icon/Delete.svg" alt=""></button>
+        </div>
+        <div class="display">
+          <section class="wrapper">
             <h2 id="cityoutput"></h2>
             <p id="descOutput"></p>
             <p id="tempOutput"></p>
             <p id="windOutput"></p>
-        </section>
-    </section>
+          </section>
+        </div>
+      </section>
     </section>
 
-
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

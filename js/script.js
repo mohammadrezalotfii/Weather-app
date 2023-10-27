@@ -24,14 +24,43 @@ function setInfo(data) {
   var description = data["weather"][0]["description"];
   var temp = data["main"]["temp"];
   var wind = data["wind"]["speed"];
-  cityoutput.innerHTML = `city: ${cityName}`;
-  descOutput.innerHTML = `desdescription: ${description}`;
-  tempOutput.innerHTML = `temp: ${convertToCel(temp)}°C`;
-  windOutput.innerHTML = `wind speed: ${wind} km/h`;
+  cityoutput.innerHTML = `${cityName}`;
+  descOutput.innerHTML = `${description}`;
+  tempOutput.innerHTML = `${convertToCel(temp)}°C`;
+  windOutput.innerHTML = `${wind} km/h`;
 }
-function keyPress(){
-    if(event.which === 13){
-        GetWeather();
-    }
+function keyPress() {
+  if (event.which === 13) {
+    GetWeather();
+  }
 }
 submit.addEventListener("click", GetWeather);
+
+$(document).ready(function () {
+  $("#submit").click(function () {
+    $("div.display").slideDown(500);
+  });
+  $("#reset").click(function () {
+    $("div.display").slideUp(300);
+    $("input#cityInput").val([""]);
+  });
+});
+
+$(window).resize(function () {
+  var width = $(window).width();
+  if (width < 720) {
+    $(".main").css({
+      width: "95%",
+    });
+    $("#cityInput").css({
+      width: "100%",
+    });
+  } else if (width > 720) {
+    $(".main").css({
+      width: "652px",
+    });
+    $("#cityInput").css({
+      width: "auto"
+    })
+  }
+});
