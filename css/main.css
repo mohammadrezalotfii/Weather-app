@@ -26,14 +26,15 @@ section.root {
   transform: translate(-50%, -50%);
   background-image: linear-gradient(
     -60deg,
-    #4cd2d6,
-    #5cdfdf,
-    hsl(207, 100%, 76%)
+    #4cd1d669,
+    #5cdfdf80,
+    hsla(207, 100%, 76%, 0.425)
   );
+  backdrop-filter: blur(2px);
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,8 +57,8 @@ section.root {
   border: none;
   outline: none;
   padding: 0px 16px;
-  height: 48px;
-  border-radius: 24px;
+  height: 56px;
+  border-radius: 28px;
   font-size: 16px;
 }
 
@@ -65,10 +66,13 @@ section.root {
   flex-grow: 2;
   border: none;
   outline: none;
-  border-radius: 24px;
+  border-radius: 28px;
   padding: 12px;
   width: 48px;
-  height: 48px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: all 100ms linear;
   background-color: #fff;
